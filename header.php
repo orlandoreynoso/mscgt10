@@ -8,17 +8,18 @@
 	<?php wp_head(); ?>
 </head>
 <body>
+	<?php // get_template_part( 'template/header', 'menu') ?>
+	<?php get_template_part( 'template/header', 'menumsc') ?>
 	<?php
 /*
 	$clave = get_the_ID();
 	echo $clave;*/
-
+/*
 		if(is_page('39')){
 			get_template_part( 'template/portada','header');
 		}
-
+*/
 	?>
 	<?php //  ?>
 	<?php // get_template_part( 'template/portada','headerExtra'); ?>
 	<?php // include (TEMPLATEPATH . '/libs/menuviejo.php');  ?>
-	<?php get_template_part( 'template/header', 'menu') ?>
