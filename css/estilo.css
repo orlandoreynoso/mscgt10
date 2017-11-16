@@ -385,6 +385,9 @@ input[type=number]::-webkit-outer-spin-button {
   width: 100%; }
 
 @media screen and (max-width: 640px) {
+  .e-menu {
+    background-color: #ffffff; } }
+@media screen and (max-width: 640px) {
   .e-menu .navbar-me {
     display: none; } }
 .e-menu .navbar-me ul.menu {
@@ -432,9 +435,24 @@ input[type=number]::-webkit-outer-spin-button {
       .e-menu .navbar-me ul.menu li a:hover {
         color: #46b271; }
 
-/*==================Men MSC========================= */
+/*==================Men MSC============ menu desk ============= */
+.menu-desk {
+  background-color: magenta;
+  padding: 20px; }
+
+.div-welcome {
+  width: 100%;
+  padding: 50px 0px;
+  color: #293449; }
+  @media screen and (max-width: 640px) {
+    .div-welcome {
+      display: none; } }
+  .div-welcome .texto-bienvenida .contenidos-c.oracion p {
+    font-size: 1.6em;
+    line-height: 1.5em; }
+
 .or-logom {
-  padding: 80px 20px 80px 20px;
+  padding: 120px 20px 120px 20px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -445,9 +463,11 @@ input[type=number]::-webkit-outer-spin-button {
   justify-content: center;
   background-image: url("../images/header-msc.jpg");
   background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 100vh; }
+  background-size: cover;
+  background-repeat: no-repeat; }
+  @media screen and (max-width: 640px) {
+    .or-logom {
+      padding: 50px 20px; } }
   .or-logom .slogan {
     margin-top: 20px;
     text-align: center;
@@ -455,8 +475,17 @@ input[type=number]::-webkit-outer-spin-button {
     .or-logom .slogan h1 {
       color: #f7b32b;
       font-size: 2.6em; }
+      @media screen and (max-width: 640px) {
+        .or-logom .slogan h1 {
+          font-size: 1.8em; } }
     .or-logom .slogan h2 {
-      color: #ffffff; }
+      color: #ffffff;
+      font-style: italic;
+      font-size: 2.2em;
+      margin-top: 10px; }
+      @media screen and (max-width: 640px) {
+        .or-logom .slogan h2 {
+          font-size: 1.5em; } }
   .or-logom a {
     display: block; }
     .or-logom a img {
@@ -514,7 +543,7 @@ input[type=number]::-webkit-outer-spin-button {
       font-family: "Oswald", sans-serif;
       font-weight: 600;
       text-transform: uppercase;
-      font-size: 0.9em; }
+      font-size: 1.1em; }
       .contenedor-lm-msc .or-menum .navbar-me ul.menu li a:hover {
         transition: 0.5s ease;
         color: #46b271; }
@@ -525,11 +554,11 @@ input[type=number]::-webkit-outer-spin-button {
     text-align: center;
     margin-bottom: 10px; }
     .e-menu .navbar .sm .ubicacion .icon {
-      color: #46b271; }
+      color: #293449; }
     .e-menu .navbar .sm .ubicacion #texto {
-      color: #ffffff; }
+      color: #293449; }
   .e-menu .navbar .sm .search {
-    color: #ffffff; }
+    color: #293449; }
     .e-menu .navbar .sm .search .searchbar {
       margin: 0px auto;
       display: flex;
@@ -583,8 +612,8 @@ input[type=number]::-webkit-outer-spin-button {
     .e-menu .navbar .cuadro-menu .logo img {
       width: 100%; }
 .e-menu .navbar button.navbar-toggler {
-  border: 1px solid #46b271;
-  background-color: #46b271;
+  border: 1px solid rgba(51, 51, 51, 0.5);
+  background-color: #e9e9e9;
   transition: 0.5s ease;
   cursor: pointer;
   outline: none; }

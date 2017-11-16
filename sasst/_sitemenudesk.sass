@@ -2,6 +2,8 @@
 	background-color: #fff
 	width: 100%
 .e-menu
+	@media screen and (max-width: 640px)
+		background-color: $blanco
 	.navbar-me
 		@media screen and ( max-width: 640px )/* ocultarlo de 640px a 0px =====*/
 			display: none
@@ -49,9 +51,25 @@
 					text-decoration: none
 					&:hover
 						color: $m-verde
-/*==================Men MSC=========================*/
+/*==================Men MSC============ menu desk =============*/
+.menu-desk
+	background-color: magenta
+	padding: 20px
+.div-welcome
+	@media screen and ( max-width: 640px )/* ocultarlo de 640px a 0px =====*/
+		display: none
+	width: 100%
+	padding: 50px 0px
+	color: $m-azul
+	.texto-bienvenida
+		.contenidos-c.oracion
+			p
+				font-size: 1.6em
+				line-height: 1.5em
 .or-logom
-	padding: 80px 20px 80px 20px
+	@media screen and ( max-width: 640px )/* ocultarlo de 640px a 0px =====*/
+		padding: 50px 20px
+	padding: 120px 20px 120px 20px
 	box-sizing: border-box
 	display: flex
 	flex-direction: column
@@ -62,9 +80,8 @@
 	justify-content: center
 	background-image: url('../images/header-msc.jpg')
 	background-position: center
-	background-size: contain
+	background-size: cover
 	background-repeat: no-repeat
-	height: 100vh
 	.slogan
 		margin-top: 20px
 		text-align: center
@@ -72,8 +89,15 @@
 		h1
 			color: $m-amarillo
 			font-size: 2.6em
+			@media screen and ( max-width: 640px )/* ocultarlo de 640px a 0px =====*/
+				font-size: 1.8em
 		h2
 			color: $blanco
+			font-style: italic
+			font-size: 2.2em
+			margin-top: 10px
+			@media screen and ( max-width: 640px )/* ocultarlo de 640px a 0px =====*/
+				font-size: 1.5em
 	a
 		display: block
 		img
@@ -135,7 +159,7 @@
 						font-family: 'Oswald', sans-serif
 						font-weight: 600
 						text-transform: uppercase
-						font-size: 0.9em
+						font-size: 1.1em
 						&:hover
 							transition: 0.5s ease
 							color: $m-verde
