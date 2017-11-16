@@ -26,6 +26,9 @@ function estilos_template(){
 	wp_register_script('bootstrapjs', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js', array('jquery'),'4.0.0', true);
   wp_register_script('scripts', get_template_directory_uri().'/js/scripts.js', array('jquery'),'1.0.0', true);
   wp_register_script('lightbox', get_template_directory_uri().'/js/lightbox.js', array('jquery'),'2.9.0', true);
+  wp_register_script('waypoints', get_template_directory_uri().'/js/jquery.waypoints.min.js', array(),'2.9.0', true);
+  wp_register_script('sticky', get_template_directory_uri().'/js/jquery.sticky.js', array('jquery'),'2.9.0', true);
+
 
 	wp_enqueue_script('jquery');
 	//wp_enqueue_script('analitics');
@@ -33,6 +36,8 @@ function estilos_template(){
 	wp_enqueue_script('bootstrapjs');
 	wp_enqueue_script('scripts');
   wp_enqueue_script('lightbox');
+  wp_enqueue_script('waypoints');
+  wp_enqueue_script('sticky');
 
 }
 

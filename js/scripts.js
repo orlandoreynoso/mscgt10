@@ -11,8 +11,24 @@ $ = jQuery.noConflict();
 
 $(document).ready(function() {
 
+/*===== Inicia waypoints =================*/
+var waypoint = new Waypoint({
+	element: document.getElementById('menu-desk'),
+	handler: function() {
+		console.log('Basic waypoint triggered');
+		$("#menu-desk").sticky({topSpacing:0});
+	}
+})
 
-//$('.dropdown-toggle').dropdown()	
+
+
+
+
+
+/*====== Finaliza waypoints ======== */
+
+
+//$('.dropdown-toggle').dropdown()
 
 	var nombre = "orlando reynoso";
   //  console.log("Cargado completamente ");

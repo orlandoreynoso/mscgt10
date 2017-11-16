@@ -8,7 +8,7 @@
     </div>
   </div><!-- Finaliza or-logom -->
 
-  <div class="div-welcome">
+  <div class="div-welcome" id="top-desk">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -18,7 +18,7 @@
     </div>
   </div><!-- Finaliza el div-welcome -->
 
-<div class="menu-desk">
+<div class="menu-desk" id="menu-desk">
   <div class="container">
     <div class="row">
       <div class="contenedor-lm-msc">
