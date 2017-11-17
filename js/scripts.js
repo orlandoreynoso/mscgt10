@@ -7,11 +7,18 @@ $ = jQuery.noConflict();
 
 $ = jQuery.noConflict();
 
-
-
 $(document).ready(function() {
 
 /*===== Inicia waypoints =================*/
+
+var $head = $('#menu-desk');
+
+$head.waypoint(function () {
+	console.log('llego el header');
+	$head.sticky({topSpacing:0});
+});
+
+/*
 var waypoint = new Waypoint({
 	element: document.getElementById('menu-desk'),
 	handler: function() {
@@ -19,7 +26,7 @@ var waypoint = new Waypoint({
 		$("#menu-desk").sticky({topSpacing:0});
 	}
 })
-
+*/
 
 
 

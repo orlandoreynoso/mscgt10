@@ -54,12 +54,19 @@
 /*==================Men MSC============ menu desk =============*/
 .e-menu
 	#menu-desk
-		z-index: 2000
-		background-color: green
+		z-index: 99999999!important
+		position: sticky
+		display: block
+		opacity: 1!important
 .menu-desk
-	background-color: magenta
 	padding: 20px
-	z-index: 2000
+	background-color: $blanco
+	box-shadow: 0 0 8px 0 rgba(0,0,0,.3)
+	-webkit-transition: all .5s ease .15s
+	-moz-transition: all .5s ease .15s
+	-o-transition: all .5s ease .15s
+	-ms-transition: all .5s ease .15s
+	transition: all .5s ease .15s
 .div-welcome
 	@media screen and ( max-width: 640px )/* ocultarlo de 640px a 0px =====*/
 		display: none

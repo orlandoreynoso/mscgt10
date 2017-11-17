@@ -19,13 +19,14 @@ $the_query = new WP_Query(create_page($page_actually,$perpage_actually));
     //echo $id;
     ?>
 
-    <a class="enlace" href="<?php the_permalink(); ?>"><?php the_title(); ?>
-    <div class="thumb" href="<?php the_permalink(); ?>"><?php the_post_thumbnail('espiritualidad'); ?></div>
-    <div class="label">
-        <div class="ic-1">
-            <i class="icon-file fa fa-file"></i><a href="<?php bloginfo('url'); ?>/homilias/" class="cat"><?php echo $title;  ?></a>
-        </div>
-    </div>
+    <a class="enlace" href="<?php the_permalink(); ?>">
+    	<div class="thumb"><?php the_post_thumbnail('espiritualidad'); ?></div>
+			<div class="titulo"><?php the_title(); ?></div>
+	    <div class="label">
+	        <div class="ic-1">
+	            <i class="icon-file fa fa-file"></i><a href="<?php bloginfo('url'); ?>/homilias/" class="cat"><?php echo $title;  ?></a>
+	        </div>
+	    </div>
 		</a>
     <!-- div class="exe"><?php // excerpt('20'); ?>...[<a href="<?php // the_permalink(); ?>"> .....</a>]</div -->
 </div>
