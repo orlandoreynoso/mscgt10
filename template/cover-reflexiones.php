@@ -45,21 +45,21 @@ $the_query = new WP_Query(create_page($month_actually,$perpage_actually));
 			<a class="enlace" href="<?php the_permalink(); ?>">
     		<div class="thumb"><?php the_post_thumbnail('espiritualidad'); ?></div>
 				<div class="titulo"><?php the_title(); ?></div>
-				<div class="label">
-					<div class="ic-1">
-						<i class="icon-file3 fa fa-file"></i>
-						<a href="<?php bloginfo('url'); ?>/reflexiones/" class="cat">Reflexiones</a>
-					</div>
-					<div class="ic-2">
-						<i class="icon-file2 fa fa-link"></i>
-						<a href="<?php bloginfo('url'); ?>/reflexiones/<?php echo $titlef; ?>" class="cat"><?php echo $title;  ?></a>
-					</div>
-					<div class="ic-3">
-						<i class="icon-file4 fa fa-clock-o"></i>
-						<span class="dia"><?php echo dia($day = $day + 1); ?></span>
-					</div>
-				</div>
 			</a>
+			<div class="label">
+				<div class="ic-1">
+					<i class="icon-file3 fa fa-file"></i>
+					<a href="<?php bloginfo('url'); ?>/reflexiones/" class="cat">Reflexiones</a>
+				</div>
+				<div class="ic-2">
+					<i class="icon-file2 fa fa-link"></i>
+					<a href="<?php bloginfo('url'); ?>/reflexiones/<?php echo $titlef; ?>" class="cat"><?php echo $title;  ?></a>
+				</div>
+				<div class="ic-3">
+					<i class="icon-file4 fa fa-clock-o"></i>
+					<span class="dia"><?php echo dia($day = $day + 1); ?></span>
+				</div>
+			</div>
 			<!-- div class="exe"><?php // excerpt('20'); ?>...[<a href="<?php // the_permalink(); ?>"> .....</a>]</div -->
 </div>
 <?php endwhile;?>
