@@ -12,11 +12,15 @@ $(document).ready(function() {
 /*===== Inicia waypoints =================*/
 
 var $head = $('#menu-desk');
+var $ventana_ancho = $(window).width();
+console.log($ventana_ancho);
 
-$head.waypoint(function () {
-	console.log('llego el header');
-	$head.sticky({topSpacing:0});
-});
+if($ventana_ancho >= 850){
+	$head.waypoint(function () {
+		console.log("i am here");
+		$head.sticky({topSpacing:0});
+	});
+}
 
 /*
 var waypoint = new Waypoint({

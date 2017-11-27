@@ -8,6 +8,20 @@ Template Name: coverPage mscgt
 <div class="slide">
   <?php get_template_part( 'template/cover', 'slide') ?>
 </div>
+<div class="sitebienvenida">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="slogan">
+          <h1>Misioneros del sagrado Corazón</h1>
+          <h2>Mixco, Ciudad de Guatemala</h2>
+        </div>
+        <?php get_template_part('template/cover', 'bienvenidos' ); ?>
+      </div>
+    </div>
+  </div>
+</div><!-- Finaliza el div-welcome -->
+
 <?php // get_template_part( 'template/cover', 'inicio') ?>
 
 <?php // get_template_part( 'template/cover', 'slide') ?>

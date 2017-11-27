@@ -4,13 +4,34 @@
     @include tituloafter($m-azul,$m-rojo)
   .contenido-espiritualidad
     display: flex
-    flex-flow: row wrap
+    flex-wrap: wrap
     box-sizing: border-box
-    justify-content: center
     .c-e
-      width: calc(var(--sizem)/3)
-      text-align: center
-      box-sizing: border-box
+      &:nth-child(1)
+        width: 55%
+        max-width: 55%
+        float: left
+        .enlace
+          display: block
+          .thumb
+            height: 550px
+            img
+              height: 100%
+      &:nth-child(2)
+        width: 25%
+        max-width: 25%
+      &:nth-child(3)
+        width: 25%
+        max-width: 25%
+      &:nth-child(4)
+        width: 33.33333%
+        max-width: 33.33333%
+      &:nth-child(5)
+        width: 33.33333%
+        max-width: 33.33333%
+      &:nth-child(6)
+        width: 33.33333%
+        max-width: 33.33333%
       .label
         display: flex
         justify-content: space-between
@@ -28,6 +49,9 @@
           margin: 0px
           width: 100%
           display: block
+.msc10-espiritualidad
+  .contenido-espiritualidad
+    .c-e
       .enlace
         background-color: magenta
         display: block
@@ -43,7 +67,7 @@
           padding: 10px
           color: $blanco
         .thumb
-          height: 260px
+          height: 250px
           display: block
           width: 100%
           overflow: hidden

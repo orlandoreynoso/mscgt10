@@ -1,11 +1,11 @@
 .e-menu
 	background-color: #fff
 	width: 100%
-.e-menu
-	@media screen and (max-width: 640px)
+	@media screen and (max-width: 640px) /*  de 640px a 0px =====*/
 		background-color: $blanco
+		box-shadow: 0 0 8px 0 rgba(0,0,0,.3)
 	.navbar-me
-		@media screen and ( max-width: 640px )/* ocultarlo de 640px a 0px =====*/
+		@media screen and ( max-width: 640px )/*  de 640px a 0px =====*/
 			display: none
 		ul.menu
 			display: flex
@@ -53,6 +53,8 @@
 						color: $m-verde
 /*==================Men MSC============ menu desk =============*/
 .e-menu
+	.sticky-wrapper
+		height: auto !important
 	#menu-desk
 		z-index: 99999999!important
 		position: sticky
@@ -60,6 +62,8 @@
 		opacity: 1!important
 .menu-desk
 	padding: 20px
+	@media screen and ( max-width: 640px )/* 640px a 0px =====*/
+		padding: 0px
 	background-color: $blanco
 	box-shadow: 0 0 8px 0 rgba(0,0,0,.3)
 	-webkit-transition: all .5s ease .15s
@@ -67,21 +71,13 @@
 	-o-transition: all .5s ease .15s
 	-ms-transition: all .5s ease .15s
 	transition: all .5s ease .15s
-.div-welcome
-	@media screen and ( max-width: 640px )/* ocultarlo de 640px a 0px =====*/
-		display: none
-	width: 100%
-	padding: 50px 0px
-	color: $m-azul
-	.texto-bienvenida
-		.contenidos-c.oracion
-			p
-				font-size: 1.6em
-				line-height: 1.5em
-.or-logom
-	@media screen and ( max-width: 640px )/* ocultarlo de 640px a 0px =====*/
+	.menu-coverpage
+		@media screen and ( max-width: 640px )/* ocultarlo de 640px a 0px =====*/
+			display: none
+.coverpage-sagradocorazon
+	@media screen and ( max-width: 640px )/*  640px a 0px =====*/
 		padding: 50px 20px
-	padding: 120px 20px 120px 20px
+	padding: 150px 20px 150px 20px
 	box-sizing: border-box
 	display: flex
 	flex-direction: column
@@ -124,9 +120,18 @@
 	width: var(--sizem)
 	justify-content: space-between
 	align-items: center
+	@media screen and ( min-width: 640px ) and (max-width: 1000px )/* valor entre 640 a 1000 */
+		justify-content: center
+	.or-logo-cover
+		.logo
+			width: 75px
+			height: 75px
+			display: block
+			img
+				width: 100%
+				height: auto
+				display: block
 	.or-menum
-		padding: 5px
-		width: var(--sizem)
 		.navbar-me
 			ul.menu
 				li.current_page_item
