@@ -21,6 +21,19 @@
 				font-size: 1.4em
 				line-height: 1.3em
 .sitebienvenida
+	.buscador-cover
+		padding: 20px
+		margin: 0px auto
+		text-align: center
+		@media screen and ( max-width: 640px )/* ocultarlo de 640px a 0px =====*/
+			display: none
+		button[type="submit"]
+			color: $celeste
+			transition: 0.5s ease
+			text-align: center
+			&:hover
+				color: $m-verde
+				transition: 0.5s ease
 	.texto-bienvenida
 		font-size: 1.3em
 		line-height: 1.4em

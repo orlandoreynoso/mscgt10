@@ -11,17 +11,41 @@ $(document).ready(function() {
 
 /*===== Inicia waypoints =================*/
 
-var $head = $('#menu-desk');
+
+/*
+
+var waypoint = new Waypoint({
+  element: document.getElementById('number-offset'),
+  handler: function(direction) {
+    notify('25px from top')
+  },
+  offset: 25
+})
+
+*/
+
+/*
+
+REvisar mas adelante
+var $head = $('#coverbienvenida');
+var $menu = $('#menu-desk');
 var $ventana_ancho = $(window).width();
 console.log($ventana_ancho);
 
 if($ventana_ancho >= 850){
 	$head.waypoint(function () {
-		console.log("i am here");
-		$head.sticky({topSpacing:0});
+		console.log("i am here");   //ver despues
+		//$head.sticky({topSpacing:0}); //ver despues
+		offset: 50%
+		console.log('offser 25');
+		$menu.sticky({topSpacing:0});
 	});
+}else
+{
+	console.log("mas de 850px de ancho");
 }
 
+*/
 /*
 var waypoint = new Waypoint({
 	element: document.getElementById('menu-desk'),
@@ -31,9 +55,6 @@ var waypoint = new Waypoint({
 	}
 })
 */
-
-
-
 
 
 /*====== Finaliza waypoints ======== */

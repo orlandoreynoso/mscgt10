@@ -8,31 +8,31 @@
 	<?php wp_head(); ?>
 </head>
 <body>
-	<?php // get_template_part( 'template/header', 'menu') ?>
-	<?php// get_template_part( 'template/header', 'menumsc') ?>
-	<?php
-/*
-	if ( is_front_page() ) {
-	   get_template_part( 'template/header', 'menumsc');
 
-	} else {
-	    get_template_part( 'template/header', 'menu');
-	}
+<div class="e-menu">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <?php get_template_part( 'template/header','buscador'); ?>
+      <?php // get_template_part( 'template/header','menuresponsivo'); ?>
+      <?php get_template_part( 'template/header','menumovil'); ?>
+    </nav>
+    
+    <div class="menu-desk" id="menu-desk">
+    <div class="container menu-coverpage">
+      <div class="row">
+        <div class="contenedor-lm-msc">
+          <div class="or-logo-cover">
+            <?php logoMsc(); ?>
+          </div>
+          <div class="or-menum">
+            <nav class="navbar-me">
+              <?php showMenuboostrap(); ?>
+            </nav>
+          </div>
+        </div><!-- fin contenedor-lm-msc -->
+      </div><!-- Finaliza el ROW -->
+    </div><!-- Finaliza el container del div menudesck -->
+  </div><!--  Finaliza el div de menu-desk-->
 
-*/
-    get_template_part( 'template/header', 'menu');
 
-	?>
-	<?php
-/*
-	$clave = get_the_ID();
-	echo $clave;*/
-/*
-		if(is_page('39')){
-			get_template_part( 'template/portada','header');
-		}
-*/
-	?>
-	<?php //  ?>
-	<?php // get_template_part( 'template/portada','headerExtra'); ?>
-	<?php // include (TEMPLATEPATH . '/libs/menuviejo.php');  ?>
+
+</div><!-- Finaliza el div >> e-menu -->

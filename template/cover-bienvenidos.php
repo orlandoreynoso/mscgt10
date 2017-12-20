@@ -10,5 +10,7 @@
     ?>
   </div>
   <!--a class="btn-msc" href="#">ingresar</a -->
-
+</div>
+<div class="buscador-cover">
+<?php get_template_part( 'template/header','buscador'); ?>
 </div>
