@@ -14,6 +14,7 @@
               <div class="titulo">
                 <div class="mapeo"><?php dimox_breadcrumbs(); ?></div>
               </div>
+              <?php echo "agrupacionessss"; ?>
               <div class="titulos-page">
                 <?php the_title(); ?>
               </div>

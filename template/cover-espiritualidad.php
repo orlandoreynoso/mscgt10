@@ -2,6 +2,7 @@
   <h3>Espiritualidad</h3>
 </div>
 <div class="contenido-espiritualidad">
+	<?php echo "estoy en file cover espiriualidad"; ?>
   <?php get_template_part( 'template/cover', 'homilias');  ?>
   <?php get_template_part( 'template/cover', 'reflexiones');  ?>
 

@@ -1,7 +1,7 @@
 <?php
 /*
   Template Name: Interiores
-  Template Post Type: post, page, product
+  Template Post Type: post, page, product, reflexiones
 */
  get_header();
 ?>

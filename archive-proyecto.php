@@ -15,7 +15,7 @@
   <div class="container">
      <div class="row">
           <div class="col-xs-12 col-md-8 con">
-          <?php  echo "estoy en category";  ?>
+          <?php  echo "estoy en proyecto";  ?>
 
           <div class="titulo">
             <div class="mapeo"><?php dimox_breadcrumbs(); ?></div>
