@@ -1,8 +1,8 @@
 <?php
 
 /*
-Template Name: Single books
-Template Post Type: post, page, books
+Template Name: Single peregrinaciones
+Template Post Type: post, page, product, peregrinaciones
  */
 
  get_header();
@@ -24,43 +24,22 @@ Template Post Type: post, page, books
                 <?php the_title(); ?>
               </div>
             </div>
-            <?php  echo  'estoy en single-book.php';      ?>
-
-<?php echo  $pagina_id = get_the_ID();  ?>
-<?php 
-
-
-//echo $datito = get_post_permalink();
-
- 
-$args = array(
-    'post_type' => 'books',
-    'post_status' => 'publish',    
-);
- 
-// Custom query.
-$query = new WP_Query( $args );
- 
-// Check that we have query results.
-if ( $query->have_posts() ) {
- 
-    // Start looping over the query results.
-    while ( $query->have_posts() ) {
- 
-        $query->the_post();
- 
-        // Contents of the queried post results go here.
- 
-    }
- 
-}
- 
-// Restore original post data.
-wp_reset_postdata();
- 
-?>
-
-
+            <?php // echo  'estoy en page';      ?>
+            <?php
+              while ( have_posts() ) : the_post();
+                the_content();
+                ?>
+                <div class="cuadro-fecha">
+                  <span class="titulo-fecha">
+                    Presentación &raquo;
+                  </span>
+                  <span class="fecha">
+                    <?php echo "" . get_post_meta( get_the_ID(), 'info_page_fecha', true ) . ""; ?>
+                  </span>
+                </div>
+          <?php
+              endwhile;
+            ?>
           </div>
        </div>
         <div class="col-xs-12 col-md-4 side">

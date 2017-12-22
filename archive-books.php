@@ -20,20 +20,16 @@
                 <?php post_type_archive_title(); ?>
               </div>
             </div>
-            <?php  echo "estoy archive reflexiones" ?>
+            <?php  echo "estoy archive books" ?>
 
-            <?php   $pagina_id = get_the_ID();
-
-
-
-               ?>
+            <?php   $pagina_id = get_the_ID();                 ?>
 
             <?php
 
             $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
 
             $args = array(
-              'post_type' => 'reflexiones',
+              'post_type' => 'books',
               'post_status' => 'publish',
               'orderby' => 'date',
               'order' => 'DESC',
