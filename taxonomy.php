@@ -1,6 +1,6 @@
 <?php
 /*
-  Template Name: archivo para la-voz
+  Template Name: archivo para reflexiones
   Template Post Type: post, page, product, reflexiones
 */
  get_header();
@@ -12,7 +12,6 @@
      <div class="row">
         <div class="col-xs-12 col-md-8 con">
           <div class="interiores">
-            <?php  echo "estoy en pagina de archivos la voz" ?>
             <div class="header-title">
               <div class="titulo">
                 <div class="mapeo"><?php dimox_breadcrumbs(); ?></div>
@@ -22,20 +21,51 @@
               </div>
             </div>
 
-    <?php   
+            <?php   $pagina_id = get_the_ID(); ?>
+            <?php  echo "estoy taxonomy.php" ?>
 
-          $tipo = 'any';
-          $idPagina =  get_the_id();
-          $cantidad = '-1';
+          <?php 
+            $termino_actual = get_queried_object();
+            $taxonomia = get_taxonomy($termino_actual->taxonomy);
+            echo "<h3>".$taxonomia->label. ": ".$termino_actual->name."</h3>";
+
+?>
+      <hr>
+<a href="<?php $termino_actual->taxonomy; ?>">taxonomia</a>
+      <hr>
+      <a href="<?php $termino_actual->parente; ?>">parente</a>
+<pre>
+<?php            var_dump(get_queried_object());            ?>
+</pre>
+           <hr>
 
 
-    ?>
+            <?php
 
+            $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
 
-<?php $reflexiones = new WP_Query(contenidosPorId($tipo,$idPagina,$cantidad));   ?>
+            $args = array(
+              'post_type' => 'reflexiones',
+              'post_status' => 'publish',
+              'orderby' => 'date',
+              'order' => 'DESC',
+              'post_parent' => 0,
+//              'posts_per_page' => 4,
+              'paged' => $paged,
+            );
+
+            ?>
+
+          <?php $reflexiones = new WP_Query($args); ?>
+
           <div class="presentaciones-desglose">
-      <?php // echo "template pastorales"; ?>
+            <?php // echo "template pastorales"; ?>
                 <div class="c-presentaciones">
+<?php
+
+
+
+                  ?>
                     <?php if ( have_posts() ) : ?>
                     <?php while($reflexiones->have_posts() ): $reflexiones->the_post(); ?>
                     <div class="list">

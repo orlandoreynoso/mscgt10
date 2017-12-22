@@ -20,13 +20,27 @@
                 <?php post_type_archive_title(); ?>
               </div>
             </div>
-            <?php  echo "estoy archive reflexiones" ?>
 
-            <?php   $pagina_id = get_the_ID();
+            <?php   $pagina_id = get_the_ID(); ?>
+            <h4>
+            <?php  echo "estoy taxonomy-tipo-reflexion.php" ?>
+            </h4>
 
+          <?php 
+            $termino_actual = get_queried_object();
+            $taxonomia = get_taxonomy($termino_actual->taxonomy);
+            echo "<h3>".$taxonomia->label. ": ".$termino_actual->name."</h3>";
 
+?>
+      <hr>
+<a href="<?php $termino_actual->taxonomy; ?>">taxonomia</a>
+      <hr>
+      <a href="<?php $termino_actual->parente; ?>">parente</a>
+<pre>
+<?php            var_dump(get_queried_object());            ?>
+</pre>
+           <hr>
 
-               ?>
 
             <?php
 
