@@ -20,20 +20,16 @@
                 <?php post_type_archive_title(); ?>
               </div>
             </div>
-            <?php  echo "estoy archive books tipo de libro" ?>
+            <?php  echo "estoy archive-reflexiones.php" ?>
 
-            <?php   $pagina_id = get_the_ID();
-
-
-
-               ?>
+            <?php   $pagina_id = get_the_ID();                 ?>
 
             <?php
 
             $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
 
             $args = array(
-              'post_type' => 'books',
+              'post_type' => 'reflexiones',
               'post_status' => 'publish',
               'orderby' => 'date',
               'order' => 'DESC',
@@ -46,19 +42,15 @@
 
           <?php $reflexiones = new WP_Query($args); ?>
 
-          <div class="presentaciones-desglose">
+          <div class="agrupaciones-desglose">
             <?php // echo "template pastorales"; ?>
-                <div class="c-presentaciones">
-<?php
+                <div class="c-agrupaciones">
 
-
-
-                  ?>
                     <?php if ( have_posts() ) : ?>
                     <?php while($reflexiones->have_posts() ): $reflexiones->the_post(); ?>
                     <div class="list">
                     <div class="todo">
-                      <a class="enlace" href="<?php the_permalink(); ?>">
+                      <a class="ir-agrupacion" href="<?php the_permalink(); ?>">
                         <div class="thumb" >
                       <?php /*==============*/
 

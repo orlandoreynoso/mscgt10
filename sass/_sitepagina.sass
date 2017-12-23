@@ -4,6 +4,45 @@
     .interiores-comunidad,
     .interior-horarios-misa
       padding-top: 20px
+      .header-title-cpt
+        width: 100%
+        padding: 10px
+        margin-bottom: 30px
+        display: flex
+        flex-wrap: wrap
+        flex-flow: row
+        justify-content: space-between
+        align-items: flex-end
+        position: relative
+        box-sizing: border-box
+        @media screen and (max-width: 480px)
+          flex-flow: column
+          .titulo
+            margin-right: 14px
+        &::after
+          position: absolute
+          right: 20px
+          bottom: -10px
+          content: ""
+          background-color: rgba($m-verde,0.5)
+          height: 1px
+          display: block
+          width: 97%
+        .titulo
+          width: 60%
+          box-sizing: border-box
+          .mapeo
+            display: flex
+            .father_title
+
+              margin-left: 6px
+        .titulos-page
+          border-right: 5px solid $celeste
+          padding: 0px 20px 0px 10px
+          font-size: 1.0em
+          text-align: right
+          @media screen and (max-width: 480px)
+            padding-right: 10px        
       iframe
         width: 100%
         height: 480px
