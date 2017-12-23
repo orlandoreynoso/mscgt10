@@ -18,6 +18,7 @@
                 <?php the_title(); ?>
               </div>
             </div>
+            <?php echo "estoy en books-tipo-de-libro.php..."; ?>
           <?php $pagina_id = get_the_ID(); ?>
           <div class="agrupaciones-desglose">
             <?php // echo "template pastorales"; ?>

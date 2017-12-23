@@ -24,39 +24,106 @@ Template Post Type: post, page, books
                 <?php the_title(); ?>
               </div>
             </div>
-            <?php  echo  'estoy en single-book.php';      ?>
+            <?php  echo  'estoy en single-book.php...';      ?>
+            <?php 
+
+/*
+
+function create_page($pagina, $perpage){
+    $args = array(
+        'post_type' => 'page',
+        'post_parent'       => ''.$pagina.'',
+        'posts_per_page'         => ''.$perpage.'',
+    );
+    return $args;
+}
+*/
+
+             ?>
 
 <?php echo  $pagina_id = get_the_ID();  ?>
 <?php 
+//$the_query = new WP_Query(create_page($pagina_id,$perpage_actually));
+ ?>
 
 
-//echo $datito = get_post_permalink();
+<?php 
+  echo "<p>ancestro Inicio===========</p>";
+  global $post;
+        /* Get an array of Ancestors and Parents if they exist */
+  $parents = get_post_ancestors( $post->ID );
+        /* Get the top Level page->ID count base 1, array base 0 so -1 */ 
+    $id = ($parents) ? $parents[count($parents)-1]: $post->ID;
+  /* Get the parent and set the $class with the page slug (post_name) */
+        $parent = get_post( $id );
+  ?>
+  <pre>
+    <?php var_dump($id); ?>
+  </pre>
+  <?php
+  echo $class = $parent->post_name;
+  echo "<p>========ancestro fin</p>";
+  $class02 = get_the_post_thumbnail( $parent, 'thumbnail');
+  $class03 = get_the_permalink( $id);
+  ?>
+  <img src="<?php echo $class02; ?>" alt="">
+  <a href="<?php echo $class03; ?>"><?php echo $class03; ?></a>
+  <?php
+  echo "<p>========ancestro fin</p>";
+ ?>
 
- 
-$args = array(
-    'post_type' => 'books',
-    'post_status' => 'publish',    
-);
- 
-// Custom query.
-$query = new WP_Query( $args );
- 
-// Check that we have query results.
-if ( $query->have_posts() ) {
- 
-    // Start looping over the query results.
-    while ( $query->have_posts() ) {
- 
-        $query->the_post();
- 
-        // Contents of the queried post results go here.
- 
-    }
- 
+<?php 
+
+
+if (have_posts()) :
+   while (have_posts()) : the_post();
+     // the_content();
+    ?>
+    <pre>
+    <?php
+      //echo $children = wp_list_pages("title_li=&child_of=".$post->post_parent."&echo=0");
+
+
+    //$mypages = get_pages( array( get_par);
+    //print_r($mypages);
+    
+
+    echo "<<<<<<<<<<<<<<<<<  <br>";
+
+     $args = array(
+  'sort_order' => 'desc',
+  'sort_column' => 'post_title',
+  'hierarchical' => 1,
+  'exclude' => '',
+  'include' => '',
+  'meta_key' => '',
+  'meta_value' => '',
+  'authors' => '',
+  'child_of' => 0,
+  'parent' => -1,
+  'exclude_tree' => '',
+  'number' => '',
+  'offset' => 0,
+  'post_type' => 'books',
+  'post_status' => 'publish'
+); 
+    $pages = get_pages($args); 
+
+    print_r($pages);
+    echo "--------------------- <hr>";
+    echo $pages['0']->page_name;
+    echo "****************** <hr>";
+    //foreach ($pages as $term) echo $term->page_name;
+
+foreach ($pages as $key => $value) {
+  echo $key[1][4]."<br> >>";
 }
- 
-// Restore original post data.
-wp_reset_postdata();
+
+      ?>
+      </pre>
+      <?php
+   endwhile;
+endif;
  
 ?>
 

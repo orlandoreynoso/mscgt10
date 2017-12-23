@@ -48,11 +48,7 @@
           <div class="presentaciones-desglose">
             <?php // echo "template pastorales"; ?>
                 <div class="c-presentaciones">
-<?php
 
-
-
-                  ?>
                     <?php if ( have_posts() ) : ?>
                     <?php while($presentaciones->have_posts() ): $presentaciones->the_post(); ?>
                     <div class="list">
