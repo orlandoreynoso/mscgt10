@@ -59,29 +59,19 @@
 
 
 // esto está correcto.
-/*
+/*              
             $keys = array_keys($reflexiones->posts);
-            echo "<pre>";
-            print_r($keys);
-            echo "</pre>";
-            
             for($i = 0; $i < count($reflexiones->posts); $i++) {
                 echo $keys[$i] . "{<br>";
                 foreach($reflexiones->posts[$keys[$i]] as $key => $value) {
-                    echo $key . " -> " . $value . "<br>";
+                    echo $key . " : " . $value . "<br>";
                 }
                 echo "}<br>";
-            } */
-
+            }
+*/
           ?>
           <pre>
-            <?php // print_r(array_values($reflexiones->posts)); ?>
-            <?php //esto funciono ?>
-            <?php for ($i=0; $i < count($reflexiones->posts) ; $i++) { 
-                  echo $reflexiones->posts[$i]->post_name."<br>";
-                    
-                    //print_r($reflexiones->posts[$i]);
-            } ?>
+            <?php // print_r($reflexiones->posts); ?>
           </pre>
           <?php
 
@@ -124,6 +114,7 @@ for($i = 0; $i < count($reflexiones); $i++) {
           <pre>            
             <?php //print_r($reflexiones); ?>
             <?php //echo  $reflexiones->query_vars; ?>
+            <?php echo "----------fin"; ?>
           </pre>
 
           <div class="agrupaciones-desglose">
