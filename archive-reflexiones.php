@@ -20,7 +20,7 @@
                 <?php post_type_archive_title(); ?>
               </div>
             </div>
-            <?php  echo "estoy archive-reflexiones.php" ?>
+            <?php // echo "estoy archive-reflexiones.php" ?>
 
             <?php   $pagina_id = get_the_ID();                 ?>
 
@@ -38,9 +38,77 @@
               'paged' => $paged,
             );
 
+
+
             ?>
 
           <?php $reflexiones = new WP_Query($args); ?>
+          <?php
+
+             $contador = count($reflexiones->posts);
+/*
+             echo "<p>Esto es el total de post: ".$contador."</p>";
+              foreach ($reflexiones->posts[0] as $key => $value) {
+                echo $key.">>".$value."</br>";
+              }
+*/
+
+            $keys = array_keys($reflexiones->posts);
+            for($i = 0; $i < count($reflexiones->posts); $i++) {
+                echo $keys[$i] . "{<br>";
+                foreach($reflexiones->posts[$keys[$i]] as $key => $value) {
+                    echo $key . " : " . $value . "<br>";
+                }
+                echo "}<br>";
+            }
+
+          ?>
+          <pre>
+            <?php // print_r($reflexiones->posts); ?>
+          </pre>
+          <?php
+
+/*
+$keys = array_keys($reflexiones);
+for($i = 0; $i < count($reflexiones); $i++) {
+    echo $keys[$i] . "{<br>";
+    foreach($reflexiones[$keys[$i]] as $key => $value) {
+        echo $key . " : " . $value . "<br>";
+    }
+    echo "}<br>";
+}
+
+*/
+
+     /*     array_walk_recursive($reflexiones, function ($item, $key) {
+            echo "<pre>";
+            echo "$key >> $item\n";
+            echo "</pre>";
+});*/
+
+  /*                foreach ($reflexiones as  $value) {
+                        $dato = $value;
+*/
+                    ?>
+                    <pre>
+                    <?php 
+                      //foreach ($dato as $key2 => $value2) {
+                        //var_dump($value2);
+                    //  }
+                    ?>
+                      <?php // var_dump($value); ?>
+                     <?php // echo "key: ".$key.".. ahora valor:".$value; ?>  
+                     <?php // echo "{$key} => {$value} ";  ?>
+                    </pre>
+                    <?php
+                ///  }
+
+          ?>
+          <pre>            
+            <?php //print_r($reflexiones); ?>
+            <?php //echo  $reflexiones->query_vars; ?>
+            <?php echo "----------fin"; ?>
+          </pre>
 
           <div class="agrupaciones-desglose">
             <?php // echo "template pastorales"; ?>

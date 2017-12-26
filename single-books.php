@@ -31,7 +31,7 @@ Template Post Type: post, page, books
                 <?php the_title(); ?>
               </div>
             </div>
-            <?php  // echo  'estoy en single-book.php...';      ?>
+            <?php  echo  'estoy en single-book.php...';      ?>
 <?php 
 
 

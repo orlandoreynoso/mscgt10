@@ -697,7 +697,8 @@ input[type=number]::-webkit-outer-spin-button {
 .sitebienvenida .texto-bienvenida {
   font-size: 1.3em;
   line-height: 1.4em;
-  padding: 20px; }
+  padding: 20px;
+  text-align: center; }
   .sitebienvenida .texto-bienvenida a {
     text-align: center;
     border-radius: 4px;
@@ -1736,6 +1737,28 @@ input[type=number]::-webkit-outer-spin-button {
       height: 100%;
       display: block;
       vertical-align: top; }
+
+.agrupaciones-desglose .navigationpresentaciones {
+  background-color: #46b271;
+  padding: 7px;
+  width: 100%;
+  display: flex;
+  justify-content: center; }
+  .agrupaciones-desglose .navigationpresentaciones a {
+    text-decoration: none; }
+  .agrupaciones-desglose .navigationpresentaciones span.current {
+    color: #ffffff;
+    background-color: #293449;
+    padding: 3px;
+    margin: 2px; }
+  .agrupaciones-desglose .navigationpresentaciones a.page-numbers {
+    color: #293449;
+    background-color: #f2f2f2;
+    padding: 3px;
+    margin: 2px; }
+    .agrupaciones-desglose .navigationpresentaciones a.page-numbers:hover {
+      color: #46b271;
+      transition: 0.5s ease; }
 
 #totop {
   display: none;
