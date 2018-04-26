@@ -28,7 +28,7 @@ $the_query = new WP_Query(create_page($month_actually,$perpage_actually));
 
 ?>
 <?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
-	<div class="c-e">
+
 
     <?php
     $id = get_permalink($month_actually);

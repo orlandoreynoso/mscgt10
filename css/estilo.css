@@ -15,7 +15,11 @@
 
 .m-contenido-secciones {
   padding-top: 20px;
-  padding-bottom: 20px; }
+  padding-bottom: 20px;
+  background-color: red;
+  clear: both; }
+  .m-contenido-secciones:before {
+    clear: both; }
   .m-contenido-secciones .titulos-general {
     padding: 10px;
     width: var(--sizem);
@@ -1642,7 +1646,8 @@ input[type=number]::-webkit-outer-spin-button {
               width: var(--sizem); } }
 
 .msc10-espiritualidad {
-  padding: 40px; }
+  width: var(--sizem);
+  box-sizing: border-box; }
   .msc10-espiritualidad .titulo-espiritualidad {
     padding: 10px;
     width: var(--sizem);
@@ -1667,76 +1672,74 @@ input[type=number]::-webkit-outer-spin-button {
         background-color: #b20013;
         z-index: 100; }
   .msc10-espiritualidad .contenido-espiritualidad {
-    display: flex;
-    flex-wrap: wrap;
-    box-sizing: border-box; }
-    .msc10-espiritualidad .contenido-espiritualidad .c-e:nth-child(1) {
-      width: 55%;
-      max-width: 55%;
-      float: left; }
-      .msc10-espiritualidad .contenido-espiritualidad .c-e:nth-child(1) .enlace {
-        display: block; }
-        .msc10-espiritualidad .contenido-espiritualidad .c-e:nth-child(1) .enlace .thumb {
-          height: 550px; }
-          .msc10-espiritualidad .contenido-espiritualidad .c-e:nth-child(1) .enlace .thumb img {
-            height: 100%; }
-    .msc10-espiritualidad .contenido-espiritualidad .c-e:nth-child(2) {
-      width: 25%;
-      max-width: 25%; }
-    .msc10-espiritualidad .contenido-espiritualidad .c-e:nth-child(3) {
-      width: 25%;
-      max-width: 25%; }
-    .msc10-espiritualidad .contenido-espiritualidad .c-e:nth-child(4) {
-      width: 33.33333%;
-      max-width: 33.33333%; }
-    .msc10-espiritualidad .contenido-espiritualidad .c-e:nth-child(5) {
-      width: 33.33333%;
-      max-width: 33.33333%; }
-    .msc10-espiritualidad .contenido-espiritualidad .c-e:nth-child(6) {
-      width: 33.33333%;
-      max-width: 33.33333%; }
-    .msc10-espiritualidad .contenido-espiritualidad .c-e .label {
+    width: var(--sizem);
+    box-sizing: border-box;
+    display: block;
+    height: auto;
+    padding-bottom: 20px;
+    padding-top: 20px; }
+    .msc10-espiritualidad .contenido-espiritualidad::after {
+      content: "";
+      clear: both; }
+    .msc10-espiritualidad .contenido-espiritualidad .c-e {
+      width: var(--sizem);
       display: flex;
       justify-content: space-between;
-      flex-direction: row;
       flex-wrap: wrap;
-      padding: 5px;
-      margin-bottom: 10px;
-      margin-top: 10px; }
-    .msc10-espiritualidad .contenido-espiritualidad .c-e .label-homilia {
-      width: 100%;
-      padding: 5px;
-      margin-bottom: 10px;
-      margin-top: 10px; }
-      .msc10-espiritualidad .contenido-espiritualidad .c-e .label-homilia a {
-        margin: 0px;
+      box-sizing: border-box;
+      padding-top: 20px;
+      height: auto;
+      clear: both; }
+      .msc10-espiritualidad .contenido-espiritualidad .c-e .wpcontent {
+        width: calc(var(--sizem)/3);
+        box-sizing: border-box;
+        clear: both; }
+        .msc10-espiritualidad .contenido-espiritualidad .c-e .wpcontent .enlace {
+          display: block; }
+          .msc10-espiritualidad .contenido-espiritualidad .c-e .wpcontent .enlace:hover {
+            opacity: 0.5;
+            transition: 0.5s ease; }
+          .msc10-espiritualidad .contenido-espiritualidad .c-e .wpcontent .enlace .thumb {
+            height: auto;
+            width: 100%; }
+            .msc10-espiritualidad .contenido-espiritualidad .c-e .wpcontent .enlace .thumb img {
+              height: auto;
+              width: 100%;
+              display: block; }
+      .msc10-espiritualidad .contenido-espiritualidad .c-e .wpcontentr {
+        width: calc(var(--sizem)/3);
+        box-sizing: border-box;
+        clear: both; }
+        .msc10-espiritualidad .contenido-espiritualidad .c-e .wpcontentr .enlace {
+          display: block; }
+          .msc10-espiritualidad .contenido-espiritualidad .c-e .wpcontentr .enlace:hover {
+            opacity: 0.5;
+            transition: 0.5s ease; }
+          .msc10-espiritualidad .contenido-espiritualidad .c-e .wpcontentr .enlace .thumb {
+            height: auto;
+            width: 100%;
+            max-height: 250px; }
+            .msc10-espiritualidad .contenido-espiritualidad .c-e .wpcontentr .enlace .thumb img {
+              height: auto;
+              width: 100%;
+              display: block; }
+      .msc10-espiritualidad .contenido-espiritualidad .c-e .label {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 5px;
+        margin-bottom: 10px;
+        margin-top: 10px; }
+      .msc10-espiritualidad .contenido-espiritualidad .c-e .label-homilia {
         width: 100%;
-        display: block; }
-
-.msc10-espiritualidad .contenido-espiritualidad .c-e .enlace {
-  background-color: magenta;
-  display: block;
-  position: relative;
-  box-sizing: border-box;
-  padding: 4px; }
-  .msc10-espiritualidad .contenido-espiritualidad .c-e .enlace .titulo {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(78, 27, 32, 0.7);
-    padding: 10px;
-    color: #ffffff; }
-  .msc10-espiritualidad .contenido-espiritualidad .c-e .enlace .thumb {
-    height: 250px;
-    display: block;
-    width: 100%;
-    overflow: hidden; }
-    .msc10-espiritualidad .contenido-espiritualidad .c-e .enlace .thumb img {
-      width: 100%;
-      height: 100%;
-      display: block;
-      vertical-align: top; }
+        padding: 5px;
+        margin-bottom: 10px;
+        margin-top: 10px; }
+        .msc10-espiritualidad .contenido-espiritualidad .c-e .label-homilia a {
+          margin: 0px;
+          width: 100%;
+          display: block; }
 
 .agrupaciones-desglose .navigationpresentaciones {
   background-color: #46b271;

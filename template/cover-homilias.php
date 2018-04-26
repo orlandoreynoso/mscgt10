@@ -26,5 +26,5 @@ $the_query = new WP_Query(create_page($page_actually,$perpage_actually));
 		<div class="label-homilia">
 			<a>homilia tal</a>
 		</div>
-</div>
+
 <?php endwhile;?>
